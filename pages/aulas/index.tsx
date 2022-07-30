@@ -16,10 +16,8 @@ export default function Classes() {
             <BsSearch size={20}></BsSearch>
           </button>
         </div>
-        <select className={index.size}>
-          <option selected disabled value="">
-            Selecione uma disciplina
-          </option>
+        <select className={index.size} defaultValue={0}>
+          <option value="">Selecione uma disciplina</option>
           <option value="matematica">Matemática</option>
           <option value="portugues">Português</option>
         </select>
