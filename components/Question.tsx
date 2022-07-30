@@ -1,3 +1,7 @@
 export default function Question() {
-  return <div></div>;
+  return (
+    <div>
+      <h1>oi</h1>
+    </div>
+  );
 }
