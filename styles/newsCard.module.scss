@@ -1,0 +1,33 @@
+$margin: 0.5rem;
+
+.info {
+  display: flex;
+  align-items: center;
+
+  .text,
+  .timestamp,
+  .img {
+    margin: {
+      left: $margin;
+      right: $margin;
+      top: 0;
+      bottom: 0;
+    }
+  }
+
+  .img {
+    width: 4rem;
+    border-radius: 100%;
+  }
+
+  .timestamp {
+    font-size: xx-small;
+    font-style: italic;
+  }
+}
+
+.content {
+  margin-left: 5.5rem;
+  max-width: 35rem;
+  text-align: justify;
+}

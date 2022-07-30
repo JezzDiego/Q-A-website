@@ -1,0 +1,27 @@
+$zero: 0;
+
+.nav {
+  margin: {
+    top: $zero;
+    left: $zero;
+    right: $zero;
+    bottom: 2rem;
+  }
+
+  .ul {
+    display: flex;
+    width: 98vw;
+
+    border: $zero;
+    padding: $zero;
+    justify-content: center;
+
+    .li {
+      display: flex;
+      margin: {
+        left: 2rem;
+        right: 2rem;
+      }
+    }
+  }
+}

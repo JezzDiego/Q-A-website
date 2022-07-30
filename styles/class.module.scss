@@ -1,0 +1,30 @@
+@import "./variables/borderBox.scss";
+@import "./variables/centerChild.scss";
+
+.borderBox {
+  .displayFlex {
+    display: flex;
+
+    .smallFont {
+      font-size: small;
+      margin-left: 0.5rem;
+      margin: {
+        top: 0;
+      }
+    }
+  }
+
+  .mediumFont {
+    font-size: large;
+    text-align: justify;
+  }
+
+  .img {
+    max-width: 12rem;
+  }
+
+  .centerImg {
+    display: flex;
+    justify-content: center;
+  }
+}
