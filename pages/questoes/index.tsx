@@ -1,9 +1,12 @@
 import Select from "../../components/Select";
+import index from "../../styles/index.module.scss";
 
-export default function index() {
+export default function Questions() {
   return (
     <>
-      <Select />
+      <div className={index.header}>
+        <Select />
+      </div>
     </>
   );
 }
