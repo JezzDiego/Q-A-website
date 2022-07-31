@@ -18,7 +18,7 @@ export default function Navbar() {
             </Link>
           </li>
           <li className={navbar.li}>
-            <Link href={"#"}>
+            <Link href={"/questoes"}>
               <a>Questões</a>
             </Link>
           </li>

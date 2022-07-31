@@ -5,7 +5,7 @@ import "../styles/globals.css";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div>
-      <Navbar></Navbar>
+      <Navbar />
       <Component {...pageProps} />
     </div>
   );
