@@ -12,7 +12,7 @@ export default function BasicTextFields() {
       noValidate
       autoComplete="off"
     >
-      <TextField id="outlined-basic" label="Outlined" variant="outlined" size="small" />
+      <TextField id="outlined-basic" label="Palavra Chave" variant="outlined" size="small" />
     </Box>
   );
 }
