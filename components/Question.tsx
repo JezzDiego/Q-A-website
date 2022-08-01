@@ -1,5 +1,5 @@
 import question from "../styles/question.module.scss";
-import { Button } from "rbx";
+import { Button, Control, Label, Radio } from "rbx";
 
 export default function Question() {
   return (
@@ -15,43 +15,23 @@ export default function Question() {
         </div>
 
         <div className={question.p}>
-          <input type="radio" id="html" name="fav_language" value="HTML" />
-          <label htmlFor="html">HTML</label>
-
-          <br />
-
-          <input type="radio" id="css" name="fav_language" value="CSS" />
-          <label htmlFor="css">CSS</label>
-
-          <br />
-
-          <input
-            type="radio"
-            id="typescript"
-            name="fav_language"
-            value="TypeScript"
-          />
-          <label htmlFor="typescript">TypeScript</label>
-
-          <br />
-
-          <input
-            type="radio"
-            id="javascript"
-            name="fav_language"
-            value="JavaScript"
-          />
-          <label htmlFor="javascript">JavaScript</label>
-
-          <br />
-
-          <input
-            type="radio"
-            id="graphql"
-            name="fav_language"
-            value="GraphQL"
-          />
-          <label htmlFor="graphql">GraphQL</label>
+          <Control>
+            <Label>
+              <Radio name="answer" /> JavaScript
+            </Label>
+            <br />
+            <Label>
+              <Radio name="answer" /> TypeScript
+            </Label>
+            <br />
+            <Label>
+              <Radio name="answer" /> GraphQL
+            </Label>
+            <br />
+            <Label>
+              <Radio name="answer" /> React
+            </Label>
+          </Control>
         </div>
 
         <Button color={"warning"} textColor={"white"}>
