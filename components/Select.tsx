@@ -1,4 +1,3 @@
-import select from "../styles/select.module.scss";
 import { Dropdown, Button, Icon } from "rbx";
 import { useState } from "react";
 import { IoMdArrowDropdown } from "react-icons/Io";
