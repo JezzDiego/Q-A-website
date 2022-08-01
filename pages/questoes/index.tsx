@@ -1,3 +1,4 @@
+import Question from "../../components/Question";
 import Search from "../../components/Search";
 import index from "../../styles/index.module.scss";
 
@@ -9,7 +10,9 @@ export default function Questions() {
                     <Search />
                 </header>
 
-                <main></main>
+                <main>
+                    <Question />
+                </main>
             </div>
         </>
     )
