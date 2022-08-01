@@ -1,5 +1,7 @@
+import TextField from "../../components/TextField";
 import { BsSearch } from "react-icons/bs";
 import Class from "../../components/Class";
+import SelectSmall from "../../components/SelectSmall";
 import index from "../../styles/index.module.scss";
 
 export default function Classes() {
@@ -7,20 +9,12 @@ export default function Classes() {
     <div>
       <header className={index.header}>
         <div className={index.search}>
-          <input
-            className={index.size}
-            type="text"
-            placeholder="Palavra Chave"
-          />
+        <TextField />
           <button className={index.icon}>
             <BsSearch size={20}></BsSearch>
           </button>
         </div>
-        <select className={index.size} defaultValue={0}>
-          <option value="">Selecione uma disciplina</option>
-          <option value="matematica">Matemática</option>
-          <option value="portugues">Português</option>
-        </select>
+        <SelectSmall />
       </header>
 
       <main className={index.general}>
