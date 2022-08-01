@@ -9,22 +9,22 @@ export default function Navbar() {
         <ul className={navbar.ul}>
           <li className={navbar.li}>
             <Link href={"/"}>
-              <a className={navbar.a}>Início</a>
+              <a>Início</a>
             </Link>
           </li>
           <li className={navbar.li}>
             <Link href={"/aulas"}>
-              <a className={navbar.a}>Aulas</a>
-            </Link>
-          </li>
-          <li className={navbar.li}>
-            <Link href={"/questoes"}>
-              <a className={navbar.a}>Questões</a>
+              <a>Aulas</a>
             </Link>
           </li>
           <li className={navbar.li}>
             <Link href={"#"}>
-              <a className={navbar.a}>Disciplinas</a>
+              <a>Questões</a>
+            </Link>
+          </li>
+          <li className={navbar.li}>
+            <Link href={"#"}>
+              <a>Disciplinas</a>
             </Link>
           </li>
         </ul>
