@@ -10,7 +10,10 @@
 }
 
 .p {
-  margin-left: 2rem;
+  margin: {
+    left: 2rem;
+    bottom: 2rem;
+  }
 }
 
 .button {

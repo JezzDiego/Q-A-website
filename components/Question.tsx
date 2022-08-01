@@ -1,4 +1,5 @@
 import question from "../styles/question.module.scss";
+import { Button } from "rbx";
 
 export default function Question() {
   return (
@@ -53,7 +54,9 @@ export default function Question() {
           <label htmlFor="graphql">GraphQL</label>
         </div>
 
-        <button className={question.button}>Responder</button>
+        <Button color={"warning"} textColor={"white"}>
+          Responder
+        </Button>
       </div>
     </>
   );
