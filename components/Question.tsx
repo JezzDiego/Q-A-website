@@ -53,7 +53,7 @@ export default function Question(props: QuestionProps) {
     <div>
         <form onSubmit={handleSubmit} key={props.question.id}>
           <FormControl sx={{ m: 3 }} error={error} variant="standard">
-            <FormLabel id="demo-error-radios">{props.question.request}</FormLabel>
+            <FormLabel id="demo-error-radios" sx={{fontSize: 25}}>{props.question.request}</FormLabel>
             <RadioGroup
               aria-labelledby="demo-error-radios"
               name="quiz"
@@ -71,7 +71,7 @@ export default function Question(props: QuestionProps) {
                 label={props.question.alt2.name}
               />
             </RadioGroup>
-            <FormHelperText>{helperText}</FormHelperText>
+            <FormHelperText sx={{fontSize: 18}}>{helperText}</FormHelperText>
             <Button
               sx={{ mt: 1, mr: 1, maxWidth: 110 }}
               type="submit"
