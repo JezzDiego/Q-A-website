@@ -5,7 +5,7 @@ import index from "../../styles/index.module.scss";
 const questions = [
   {
     id: 0,
-    question: "Qual o seu nome?",
+    request: "Qual o seu nome?",
     alt1: {
       name: "João",
       slug: "joao",
@@ -18,7 +18,7 @@ const questions = [
   },
   {
     id: 1,
-    question: "Qual o seu sobrenome?",
+    request: "Qual o seu sobrenome?",
     alt1: {
       name: "Silva",
       slug: "silva",
@@ -31,7 +31,7 @@ const questions = [
   },
   {
     id: 2,
-    question: "Qual o seu nome de usuário?",
+    request: "Qual o seu nome de usuário?",
     alt1: {
       name: "Joaozinho",
       slug: "joaozinho",
@@ -53,7 +53,14 @@ export default function Questions() {
         </header>
 
         <main>
-          <Question questions={questions} />
+          
+          {
+            questions.map((question) => {
+              return (
+                <Question key={question.id} question={question} />
+              )
+            })
+          }
         </main>
       </div>
     </>

@@ -8,19 +8,19 @@ import FormLabel from "@mui/material/FormLabel";
 import Button from "@mui/material/Button";
 
 interface QuestionProps {
-  questions: {
-    id: number;
-    question: string;
-    alt1: {
-      name: string;
-      slug: string;
-    };
-    alt2: {
-      name: string;
-      slug: string;
-    };
-    correct: string;
-  }[];
+    question: {
+      id: number;
+      request: string;
+      alt1: {
+        name: string,
+        slug: string,
+      },
+      alt2: {
+        name: string,
+        slug: string,
+      },
+      correct: string;
+    }
 }
 
 export default function Question(props: QuestionProps) {
@@ -37,10 +37,10 @@ export default function Question(props: QuestionProps) {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    if (value === "joao") {
+    if (value === props.question.correct) {
       setHelperText("Você acertou!");
       setError(false);
-    } else if (value === "maria") {
+    } else if (value !== props.question.correct) {
       setHelperText("Você errou!");
       setError(true);
     } else {
@@ -51,10 +51,9 @@ export default function Question(props: QuestionProps) {
 
   return (
     <div>
-      {props.questions.map((question) => (
-        <form onSubmit={handleSubmit} key={question.id}>
+        <form onSubmit={handleSubmit} key={props.question.id}>
           <FormControl sx={{ m: 3 }} error={error} variant="standard">
-            <FormLabel id="demo-error-radios">{question.question}</FormLabel>
+            <FormLabel id="demo-error-radios">{props.question.request}</FormLabel>
             <RadioGroup
               aria-labelledby="demo-error-radios"
               name="quiz"
@@ -62,14 +61,14 @@ export default function Question(props: QuestionProps) {
               onChange={handleRadioChange}
             >
               <FormControlLabel
-                value={question.alt1.slug}
+                value={props.question.alt1.slug}
                 control={<Radio />}
-                label={question.alt1.name}
+                label={props.question.alt1.name}
               />
               <FormControlLabel
-                value={question.alt2.slug}
+                value={props.question.alt2.slug}
                 control={<Radio />}
-                label={question.alt2.name}
+                label={props.question.alt2.name}
               />
             </RadioGroup>
             <FormHelperText>{helperText}</FormHelperText>
@@ -83,7 +82,6 @@ export default function Question(props: QuestionProps) {
             </Button>
           </FormControl>
         </form>
-      ))}
     </div>
   );
 }
