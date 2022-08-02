@@ -38,10 +38,10 @@ export default function Question(props: QuestionProps) {
     event.preventDefault();
 
     if (value === "joao") {
-      setHelperText("You got it!");
+      setHelperText("Você acertou!");
       setError(false);
     } else if (value === "maria") {
-      setHelperText("Sorry, wrong answer!");
+      setHelperText("Você errou!");
       setError(true);
     } else {
       setHelperText("Please select an option.");
@@ -52,7 +52,7 @@ export default function Question(props: QuestionProps) {
   return (
     <div>
       {props.questions.map((question) => (
-        <form onSubmit={handleSubmit} tabIndex={question.id}>
+        <form onSubmit={handleSubmit} key={question.id}>
           <FormControl sx={{ m: 3 }} error={error} variant="standard">
             <FormLabel id="demo-error-radios">{question.question}</FormLabel>
             <RadioGroup
@@ -77,6 +77,7 @@ export default function Question(props: QuestionProps) {
               sx={{ mt: 1, mr: 1, maxWidth: 110 }}
               type="submit"
               variant="contained"
+              color="warning"
             >
               Responder
             </Button>
