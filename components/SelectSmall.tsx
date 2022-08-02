@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 
-const currencies = [
+const subjects = [
   {
     value: 'portugues',
     label: 'Português',
@@ -23,7 +23,7 @@ const currencies = [
 ];
 
 export default function SelectTextFields() {
-  const [currency, setCurrency] = React.useState('EUR');
+  const [currency, setCurrency] = React.useState('');
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setCurrency(event.target.value);
@@ -47,7 +47,7 @@ export default function SelectTextFields() {
           onChange={handleChange}
           size="small"
         >
-          {currencies.map((option) => (
+          {subjects.map((option) => (
             <MenuItem key={option.value} value={option.value}>
               {option.label}
             </MenuItem>

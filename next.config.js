@@ -12,4 +12,8 @@ module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },
+  i18n: {
+    locales: ["pt-br"],
+    defaultLocale: "pt-br",
+  },
 };
