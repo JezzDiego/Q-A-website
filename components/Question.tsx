@@ -24,7 +24,7 @@ interface QuestionProps {
 }
 
 export default function Question(props: QuestionProps) {
-  const [value, setValue] = React.useState("");
+  const [value, setValue] = React.useState(" ");
   const [error, setError] = React.useState(false);
   const [helperText, setHelperText] = React.useState("Escolha uma opção");
 
@@ -42,9 +42,6 @@ export default function Question(props: QuestionProps) {
       setError(false);
     } else if (value !== props.question.correct) {
       setHelperText("Você errou!");
-      setError(true);
-    } else {
-      setHelperText("Please select an option.");
       setError(true);
     }
   };
