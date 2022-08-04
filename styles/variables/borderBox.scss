@@ -1,6 +1,7 @@
 .borderBox {
-  border: 1px solid white;
+  border: 0.7px solid rgba(0, 0, 0, 0.185);
+  border-radius: 10px;
   width: fit-content;
-  margin: 0.5rem;
-  padding: 1rem;
+  padding: 2rem;
+  cursor: pointer;
 }
