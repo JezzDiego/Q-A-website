@@ -35,6 +35,30 @@ const classesArray = [
     discussion: "Orações subordinadas",
     author: "Eduardo",
   },
+  {
+    id: 4,
+    imgSrc: "https://github.com/duardoqueiroz.png",
+    title: "Aula 04 - Título da aula aqui",
+    subject: "Português",
+    discussion: "Orações subordinadas",
+    author: "Eduardo",
+  },
+  {
+    id: 5,
+    imgSrc: "https://github.com/duardoqueiroz.png",
+    title: "Aula 04 - Título da aula aqui",
+    subject: "Português",
+    discussion: "Orações subordinadas",
+    author: "Eduardo",
+  },
+  {
+    id: 6,
+    imgSrc: "https://github.com/duardoqueiroz.png",
+    title: "Aula 04 - Título da aula aqui",
+    subject: "Português",
+    discussion: "Orações subordinadas",
+    author: "Eduardo",
+  },
 ];
 
 export default function Classes() {
