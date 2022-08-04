@@ -10,7 +10,7 @@ interface NewsProps {
 
 export default function NewsCard(props: NewsProps) {
   return (
-    <div className={index.borderBox}>
+    <div className={`${index.borderBox} ${index.newsBox}`}>
       <div className={newsCard.info}>
         <img
           className={newsCard.img}
