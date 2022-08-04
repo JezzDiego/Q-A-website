@@ -4,10 +4,17 @@
 .general {
   display: grid;
   grid-template-columns: auto auto auto auto;
+  align-items: flex-start;
 }
 
 .button {
   background-color: transparent;
   border: none;
-  margin-top: 1rem;
+  margin: {
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+  }
+  width: fit-content;
+  padding: 0;
 }
