@@ -1,0 +1,20 @@
+{
+    "subjects": [
+        {
+            "value": "portugues",
+            "label": "Português"
+        },
+        {
+            "value": "matematica",
+            "label": "Matemática"
+        },
+        {
+            "value": "historia",
+            "label": "História"
+        },
+        {
+            "value": "biologia",
+            "label": "Biologia"
+        }
+    ]
+}
