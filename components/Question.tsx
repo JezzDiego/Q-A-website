@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -36,17 +36,17 @@ interface QuestionProps {
 }
 
 export default function Question(props: QuestionProps) {
-  const [value, setValue] = React.useState(" ");
-  const [error, setError] = React.useState(false);
-  const [helperText, setHelperText] = React.useState("Escolha uma opção");
+  const [value, setValue] = useState(" ");
+  const [error, setError] = useState(false);
+  const [helperText, setHelperText] = useState("Escolha uma opção");
 
-  const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleRadioChange = (event: ChangeEvent<HTMLInputElement>) => {
     setValue((event.target as HTMLInputElement).value);
     setHelperText(" ");
     setError(false);
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     if (value === props.question.correct) {
